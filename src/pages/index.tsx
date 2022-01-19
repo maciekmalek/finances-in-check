@@ -1,14 +1,19 @@
 import React from "react";
-import { PageProps } from "gatsby";
+import { PageProps, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
-class IndexRoute extends React.Component {
-  constructor(props: PageProps) {
-    super(props);
-    this.state = { items: [], text: "" };
-  }
-  render(): React.ReactNode {
-    return <Layout {...this.props}></Layout>;
-  }
-}
 
-export default IndexRoute;
+export default function IndexRoute() {
+  const props = useStaticQuery(graphql`
+    query IndexQuery {
+      site {
+        siteMetadata {
+          title
+          description
+          username
+        }
+      }
+    }
+  `);
+
+  return <Layout {...props}></Layout>;
+}

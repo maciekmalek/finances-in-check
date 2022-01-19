@@ -1,4 +1,3 @@
-import { PageProps } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,16 +13,21 @@ const Title = styled.span`
   font-size: 50px;
   color: palevioletred;
 `;
-const MenuBurger = styled.div``;
+const Menu = styled.div``;
 
-export default function Navbar(props: PageProps) {
+const LoginName = styled.span`
+  font-size: 30px;
+`;
+
+export default function Navbar(props) {
   return (
     <div>
       <Header>
-        <Title>Finances in check</Title>
-        <MenuBurger>
+        <Title>{props.site.siteMetadata.title}</Title>
+        <Menu>
+          <LoginName>{props.site.siteMetadata.username}</LoginName>
           <FontAwesomeIcon icon={faBars} size="4x" />
-        </MenuBurger>
+        </Menu>
       </Header>
     </div>
   );
