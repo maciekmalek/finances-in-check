@@ -1,5 +1,5 @@
 import React from "react";
-import { PageProps, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
 
 export default function IndexRoute() {

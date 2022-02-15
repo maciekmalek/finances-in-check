@@ -4,19 +4,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = styled.div`
-  background: #add8e6;
+  background: rgb(220, 220, 220, 0.2);
+
   display: flexbox;
   justify-content: space-between;
 `;
 const Title = styled.span`
   font-weight: bold;
-  font-size: 50px;
+  font-size: 4em;
   color: palevioletred;
 `;
-const Menu = styled.div``;
+const Menu = styled.div`
+  text-align: center;
+  width: 25em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
 
 const LoginName = styled.span`
-  font-size: 30px;
+  font-size: 2em;
 `;
 
 export default function Navbar(props) {
