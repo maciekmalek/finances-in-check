@@ -26,6 +26,10 @@ const LoginName = styled.span`
   font-size: 2em;
 `;
 
+const menuHandler = () => {
+  console.log("fawsome click");
+};
+
 export default function Navbar(props) {
   return (
     <div>
@@ -33,7 +37,7 @@ export default function Navbar(props) {
         <Title>{props.site.siteMetadata.title}</Title>
         <Menu>
           <LoginName>{props.site.siteMetadata.username}</LoginName>
-          <FontAwesomeIcon icon={faBars} size="4x" />
+          <FontAwesomeIcon icon={faBars} size="4x" onClick={menuHandler} />
         </Menu>
       </Header>
     </div>
