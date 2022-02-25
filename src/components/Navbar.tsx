@@ -23,7 +23,7 @@ const Menu = styled.div`
 `;
 
 const LoginName = styled.span`
-  font-size: 2em;
+  font-size: 3em;
 `;
 
 const menuHandler = () => {
