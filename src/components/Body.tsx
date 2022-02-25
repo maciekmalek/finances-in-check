@@ -6,7 +6,7 @@ const DummyText = styled.p`
   font-size: 40px;
 `;
 const AddRecordButton = styled.button`
-  font-size: 20px;
+  font-size: 25px;
 `;
 export default function Body(props) {
   return (
