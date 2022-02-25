@@ -11,7 +11,7 @@ const Header = styled.div`
 `;
 const Title = styled.span`
   font-weight: bold;
-  font-size: 4em;
+  font-size: 5em;
   color: palevioletred;
 `;
 const Menu = styled.div`
